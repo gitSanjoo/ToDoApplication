@@ -5,8 +5,11 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sanjoo.todoapplication.data.ItemInfoModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class UIListed : AppCompatActivity() {
+class OIAMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uilisted)
@@ -22,5 +25,13 @@ class UIListed : AppCompatActivity() {
 
         val adapter=InfoAdapter(infoItem)
         rvHorizontal.adapter=adapter
+        getDashBoardData()
+    }
+
+    private fun getDashBoardData(){
+        CoroutineScope(Dispatchers.IO).launch {
+            val dashboardData=ApiClient.getDashboardData()
+
+        }
     }
 }
