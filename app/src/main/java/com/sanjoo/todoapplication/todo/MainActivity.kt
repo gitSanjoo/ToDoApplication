@@ -1,4 +1,4 @@
-package com.sanjoo.todoapplication
+package com.sanjoo.todoapplication.todo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sanjoo.todoapplication.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rv:RecyclerView
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         btnAdd.setOnClickListener {
             val todoTitle=et.text.toString()
             if (todoTitle.isNotEmpty()){
-                val todo=Todo(todoTitle)
+                val todo= Todo(todoTitle)
                 todoAdapter.addTodo(todo)
                 et.text.clear()
             }

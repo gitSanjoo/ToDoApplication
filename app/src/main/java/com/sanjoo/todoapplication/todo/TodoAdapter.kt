@@ -1,4 +1,4 @@
-package com.sanjoo.todoapplication
+package com.sanjoo.todoapplication.todo
 
 import android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.sanjoo.todoapplication.R
 
 class TodoAdapter(private val todoList:MutableList<Todo>):RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
     inner class TodoViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){

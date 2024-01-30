@@ -1,4 +1,4 @@
-package com.sanjoo.todoapplication
+package com.sanjoo.todoapplication.todo
 
 data class Todo(
     val title:String,
